@@ -1,18 +1,17 @@
 :root {
-  --blanc: #ffffff;
-  --beige: #e8c2b6;
-  --brun: #2e1f1c;
-  --gris: #f8f6f5;
-
-  --font-title: 'Playfair Display', serif;
-  --font-body: 'Montserrat', sans-serif;
+  --beige: #E9D5C6; /* couleur PAC */
+  --chocolat: #2C1A12; /* couleur du texte premium */
 }
 
 body {
-  margin: 0;
-  font-family: var(--font-body);
-  background: var(--blanc);
-  color: var(--brun);
+  background-color: var(--beige);
+  color: var(--chocolat);
+  font-family: 'Georgia', serif;
+}
+
+header, footer {
+  background-color: #fff; /* pour garder du contraste */
+  border-bottom: 1px solid #ddd;
 }
 
 header {
@@ -63,20 +62,20 @@ header nav a:hover {
 }
 
 .btn {
-  padding: 12px 28px;
+  background-color: var(--chocolat);
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 30px;
   border: none;
-  border-radius: 8px;
-  background: var(--beige);
-  color: var(--brun);
-  font-weight: 600;
   cursor: pointer;
+  font-weight: bold;
   transition: 0.3s;
 }
 
 .btn:hover {
-  background: var(--brun);
-  color: var(--blanc);
+  background-color: #000;
 }
+
 
 .catalogue {
   padding: 60px;
