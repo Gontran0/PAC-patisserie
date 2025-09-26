@@ -5,53 +5,73 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PAC Pâtisserie – Accueil</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
 
 <header>
-  <div class="logo">🍪 PAC Pâtisserie</div>
+  <div class="logo">
+    <img src="images/logo.png" alt="PAC Pâtisserie" style="height:60px;">
+  </div>
   <nav>
     <a href="index.html">Accueil</a>
-    <a href="catalogue.html">Catalogue</a>
+    <a href="nos-produits.html">Nos Produits</a>
+    <a href="panier.html">Panier</a>
     <a href="apropos.html">À propos</a>
     <a href="contact.html">Contact</a>
   </nav>
 </header>
 
 <section class="hero">
+  <div class="swiper heroSwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="images/hero1.jpg" alt="Accueil"></div>
+      <div class="swiper-slide"><img src="images/hero2.jpg" alt="Accueil"></div>
+      <div class="swiper-slide"><img src="images/hero3.jpg" alt="Accueil"></div>
+    </div>
+  </div>
   <div class="hero-text">
-    <h1>L’élégance du goût</h1>
-    <p>Biscuits artisanaux et gâteaux de voyage faits avec passion, pour un plaisir raffiné.</p>
-    <a href="catalogue.html"><button class="btn">Découvrir nos créations</button></a>
+    <h1>Bienvenue les gourmands</h1>
+    <p>Venez découvrir l’expérience <strong>PAC Pâtisserie</strong></p>
+    <a href="nos-produits.html"><button class="btn">Voir nos produits</button></a>
   </div>
-  <img src="images/hero-biscuits.jpg" alt="Biscuits premium" width="500">
 </section>
 
-<section>
-  <h2 style="text-align:center; margin-top:50px;">Nos Produits phares</h2>
-  <div class="catalogue">
-    <div class="card">
-      <img src="images/biscuit1.jpg" alt="Sablés">
-      <h3>Sablés au beurre</h3>
-      <p>Fondants et délicats</p>
-    </div>
-    <div class="card">
-      <img src="images/biscuit2.jpg" alt="Madeleines">
-      <h3>Madeleines dorées</h3>
-      <p>Légères et parfumées</p>
-    </div>
-    <div class="card">
-      <img src="images/biscuit3.jpg" alt="Financiers">
-      <h3>Financiers noisette</h3>
-      <p>Moelleux au bon goût d’amande</p>
+<section class="categories">
+  <h2>Nos Univers</h2>
+  <div class="swiper categoriesSwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">Gâteaux de voyage</div>
+      <div class="swiper-slide">Biscuiterie</div>
+      <div class="swiper-slide">Chocolaterie</div>
+      <div class="swiper-slide">Confiserie</div>
+      <div class="swiper-slide">Viennoiseries</div>
     </div>
   </div>
 </section>
 
-<footer>
-  <p>© 2025 PAC Pâtisserie – Tous droits réservés</p>
-</footer>
+<section class="bestsellers">
+  <h2>Nos Best-Sellers</h2>
+  <div class="produits-grid">
+    <div class="produit"><img src="images/cookies.jpg"><h3>Cookies</h3><p class="prix">3,00 €</p></div>
+    <div class="produit"><img src="images/financiers.jpg"><h3>Financiers</h3><p class="prix">2,50 €</p></div>
+    <div class="produit"><img src="images/madeleines.jpg"><h3>Madeleines</h3><p class="prix">4,00 €</p></div>
+    <div class="produit"><img src="images/brownie.jpg"><h3>Brownie</h3><p class="prix">3,50 €</p></div>
+  </div>
+</section>
 
+<section class="projet">
+  <h2>Notre Histoire</h2>
+  <p>PAC Pâtisserie est né d’une passion pour la gourmandise et le partage.</p>
+  <a href="apropos.html"><button class="btn">En savoir plus</button></a>
+</section>
+
+<footer><p>© 2025 PAC Pâtisserie – Tous droits réservés</p></footer>
+
+<script>
+  new Swiper(".heroSwiper",{loop:true,autoplay:{delay:3000},effect:"fade"});
+  new Swiper(".categoriesSwiper",{slidesPerView:3,spaceBetween:20,loop:true,autoplay:{delay:2000}});
+</script>
 </body>
 </html>
